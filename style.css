@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #002765;
+  margin-bottom: 20px;
+}
+
+.row {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul {
+  width: 100%;
+  max-width: 500px;
+  list-style: none;
+}
+
+ul li {
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  background: #fff;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url('images/cancel.png');
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 12px;
+}
+
+ul li.checked::before {
+  background-image: url('images/checked.png');
+}
+
+.delete-btn {
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  color: #f44336;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.delete-bin {
+  width: 100%;
+  max-width: 500px;
+  height: 80px;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 15px;
+  margin-top: 20px;
+  border: 2px dashed #fff;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delete-bin.drag-over {
+  background-color: #d32f2f;
+}
